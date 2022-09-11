@@ -2,10 +2,10 @@ import FeatureHeader from '../feature-header';
 import ProductCard from './products-card';
 
 const productsData = [
-  { name: 'Mustang Gt', model: 'Ecoboost Fastback 2022' },
-  { name: 'Mustang S', model: 'Ecoboost Convertible 2022' },
-  { name: 'Mustang ', model: 'Premium Fastback 2022' },
-  { name: 'Mustang Gt', model: 'Mach 1 Premium 2022' },
+  { id: 1, name: 'Mustang Gt', model: 'Ecoboost Fastback 2022' },
+  { id: 2, name: 'Mustang S', model: 'Ecoboost Convertible 2022' },
+  { id: 3, name: 'Mustang ', model: 'Premium Fastback 2022' },
+  { id: 4, name: 'Mustang Gt', model: 'Mach 1 Premium 2022' },
 ];
 
 const Products = () => {

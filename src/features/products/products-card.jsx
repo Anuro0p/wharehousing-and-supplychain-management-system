@@ -7,15 +7,19 @@ import Typography from '@mui/material/Typography';
 import car3 from '../../assets/img/car3.png';
 import car4 from '../../assets/img/car4.png';
 import car5 from '../../assets/img/car5.png';
+import { useNavigate } from 'react-router-dom';
+import { Delete } from '@mui/icons-material';
 
 const ProductCard = (_props) => {
   let cars = [car3, car4, car5];
+  const navigate = useNavigate();
+
   return (
     <Card sx={{ maxWidth: 240 }}>
       <CardMedia
         component='img'
         height='140'
-        image={cars[_props.product.index % 3]}
+        image={cars[_props.product.car.id % 3]}
         alt='green iguana'
       />
       <CardContent>
@@ -27,8 +31,17 @@ const ProductCard = (_props) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size='small'>Delete</Button>
-        <Button size='small' variant='contained'>
+        <Button size='small'>
+          <Delete />
+        </Button>
+        <Button
+          size='small'
+          variant='contained'
+          onClick={() => {
+            navigate(_props.product.car.id.toString());
+            console.log(_props.product.car.id);
+          }}
+        >
           View
         </Button>
       </CardActions>
